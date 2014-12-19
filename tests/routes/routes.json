@@ -1,0 +1,10 @@
+{
+    "GET": {
+        "\/": {
+            "uses": "BlahController@showAbout"
+        },
+        "contact": {
+            "uses": "HomeController@showContact"
+        }
+    }
+}

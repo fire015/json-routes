@@ -1,0 +1,24 @@
+{
+	"name": "fire015/json-routes",
+	"description": "Define your routes in laravel using JSON files",
+	"keywords": ["laravel", "json", "route", "router"],
+	"authors": [
+		{
+			"name": "Jason M",
+			"email": "emailfire@gmail.com"
+		}
+	],
+	"require": {
+		"php": ">=5.4.0",
+		"illuminate/support": "~4.2"
+	},
+	"require-dev": {
+		"orchestra/testbench": "~2.2",
+		"phpunit/phpunit": "~4.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"Fire015\\JsonRoutes\\": "src/"
+		}
+	}
+}
