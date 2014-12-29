@@ -13,12 +13,14 @@
 		"illuminate/support": "~4.2"
 	},
 	"require-dev": {
-		"orchestra/testbench": "~2.2",
+		"illuminate/events": "~4.2",
+		"illuminate/routing": "~4.2",
 		"phpunit/phpunit": "~4.0"
 	},
 	"autoload": {
 		"psr-4": {
-			"Fire015\\JsonRoutes\\": "src/"
+			"Fire015\\JsonRoutes\\": "src/",
+			"Fire015\\JsonRoutesTests\\": "tests/"
 		}
 	}
 }

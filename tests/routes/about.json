@@ -1,0 +1,7 @@
+{
+    "GET": {
+        "about": {
+            "uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
+        }
+	}
+}

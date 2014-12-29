@@ -1,10 +1,15 @@
 {
     "GET": {
-        "\/": {
-            "uses": "BlahController@showAbout"
+        "/": {
+            "uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
         },
-        "contact": {
-            "uses": "HomeController@showContact"
+        "abc/def": {
+            "uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
+        }
+    },
+    "POST": {
+        "/": {
+            "uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
         }
     }
 }

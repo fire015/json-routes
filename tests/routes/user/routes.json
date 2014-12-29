@@ -1,0 +1,7 @@
+{
+    "GET": {
+        "user/{id}": {
+            "uses": "Fire015\\JsonRoutesTests\\TestController@showUser"
+        }
+    }
+}
