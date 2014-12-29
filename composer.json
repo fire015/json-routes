@@ -2,6 +2,7 @@
 	"name": "fire015/json-routes",
 	"description": "Define your routes in laravel using JSON files",
 	"keywords": ["laravel", "json", "route", "router"],
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Jason M",
