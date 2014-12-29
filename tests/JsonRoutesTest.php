@@ -13,7 +13,8 @@ class JsonRoutesTest extends \PHPUnit_Framework_TestCase {
 	 * @return void
 	 */
 	public function testRouter() {
-		$router = $this->getRouter();
+		$config = $this->getConfig();
+		$router = $this->getRouter($config);
 		$router->get('foo/bar', function() { return 'hello'; });
 		$this->assertEquals('hello', $router->dispatch(Request::create('foo/bar', 'GET'))->getContent());
 		$this->assertEquals('testing', $router->dispatch(Request::create('/', 'GET'))->getContent());
@@ -31,19 +32,34 @@ class JsonRoutesTest extends \PHPUnit_Framework_TestCase {
 	 *
 	 * @return void
 	 */
-	public function testInvalid() {
-		$router = $this->getRouter();
+	public function testInvalidJSON() {
+		$config = $this->getConfig();
+		$router = $this->getRouter($config);
 		$router->dispatch(Request::create('invalid', 'GET'));
+	}
+
+	/**
+	 * Test invalid config
+	 *
+	 * @expectedException \Symfony\Component\HttpKernel\Exception\NotFoundHttpException
+	 *
+	 * @return void
+	 */
+	public function testInvalidConfig() {
+		$config = array('path' => __DIR__ . '/non-exist');
+		$router = $this->getRouter($config);
+		$router->dispatch(Request::create('/', 'GET'));
 	}
 
 	/**
 	 * Get the router
 	 *
+	 * @param array $config
+	 *
 	 * @return IlluminateRouter
 	 */
-	protected function getRouter() {
+	protected function getRouter($config) {
 		$router = new IlluminateRouter(new Dispatcher);
-		$config = $this->getConfig();
 
 		$router->before(function($request) use ($router, $config) {
 			$customRouter = new Router($router, $config);
