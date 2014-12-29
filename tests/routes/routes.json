@@ -1,15 +1,15 @@
 {
-    "GET": {
-        "/": {
-            "uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
-        },
-        "abc/def": {
-            "uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
-        }
-    },
-    "POST": {
-        "/": {
-            "uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
-        }
-    }
+	"GET": {
+		"/": {
+			"uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
+		},
+		"abc/def": {
+			"uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
+		}
+	},
+	"POST": {
+		"/": {
+			"uses": "Fire015\\JsonRoutesTests\\TestController@showIndex"
+		}
+	}
 }

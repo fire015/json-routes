@@ -1,7 +1,7 @@
 {
-    "GET": {
-        "user/edit/{id}": {
-            "uses": "Fire015\\JsonRoutesTests\\TestController@showUser"
-        }
-    }
+	"GET": {
+		"user/edit/{id}": {
+			"uses": "Fire015\\JsonRoutesTests\\TestController@showUser"
+		}
+	}
 }
