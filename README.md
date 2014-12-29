@@ -58,7 +58,7 @@ You simply define the route URI as the key under each method and the usual route
 
 You can also split your routes up into sub-files and folders. For example you can define `user/account` in any of the following places:
 
-* app/config/routes/user.json
-* app/config/routes/user/routes.json
-* app/config/routes/user/account.json
-* app/config/routes/user/account/routes.json
+* /user.json
+* /user/routes.json
+* /user/account.json
+* /user/account/routes.json
