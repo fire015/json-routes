@@ -56,4 +56,9 @@ Presuming we have created the `app/config/routes` folder as specified above, cre
 
 You simply define the route URI as the key under each method and the usual route options as if it were an array in the `Route::(get|post|put|patch|delete|options)` static methods.
 
-You can also split your routes up into sub-files and folders. For example you can define `user/account` in `app/config/routes/user.json` or `app/config/routes/user/routes.json` or `app/config/routes/user/account/routes.json` (no limit on recursion).
+You can also split your routes up into sub-files and folders. For example you can define `user/account` in any of the following places:
+
+* app/config/routes/user.json
+* app/config/routes/user/routes.json
+* app/config/routes/user/account.json
+* app/config/routes/user/account/routes.json
